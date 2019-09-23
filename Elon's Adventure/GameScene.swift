@@ -20,6 +20,10 @@ class GameScene: SKScene {
     var joystickAction = false,
         knobRadius: CGFloat = 50.0
     
+    var previousTimeInterval: TimeInterval = 0,
+        playerIsFacingRight = true
+    let playerSpeed = 4.0
+    
     // MARK: Methods
     
     override func didMove(to view: SKView) {
@@ -77,5 +81,19 @@ extension GameScene {
         moveBack.timingMode = .linear
         joystickKnob?.run(moveBack)
         joystickAction = false
+    }
+}
+
+// MARK:- Game Loop
+extension GameScene {
+    override func update(_ currentTime: TimeInterval) {
+        let deltaTime = currentTime - previousTimeInterval
+        previousTimeInterval = currentTime
+        
+        guard let joystickKnob = joystickKnob else { return }
+        let xPosition = Double(joystickKnob.position.x)
+        let displacement = CGVector(dx: deltaTime * xPosition * playerSpeed, dy: 0)
+        let move = SKAction.move(by: displacement, duration: 0)
+        player?.run(move)
     }
 }
