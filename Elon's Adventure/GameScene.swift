@@ -109,6 +109,8 @@ extension GameScene {
         } else {
             faceAction = move
         }
-        player?.run(faceAction)
+        if joystickAction {
+            player?.run(faceAction)
+        }
     }
 }
