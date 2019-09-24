@@ -31,6 +31,9 @@ class GameScene: SKScene {
     var score = 0
     var rewardIsNotTouched = true
     
+    var heartsArray = [SKSpriteNode]()
+    let heartContainer = SKSpriteNode()
+    
     // Sprite Engine
     var previousTimeInterval: TimeInterval = 0,
         playerIsFacingRight = true
@@ -76,6 +79,12 @@ class GameScene: SKScene {
         scoreLabel.horizontalAlignmentMode = .right
         scoreLabel.text = String(score)
         cameraNode?.addChild(scoreLabel)
+        
+        // Life
+        heartContainer.position = CGPoint(x: -300, y: 140)
+        heartContainer.zPosition = 5
+        cameraNode?.addChild(heartContainer)
+        fillHearts(count: 3)
     }
 }
 
@@ -137,6 +146,16 @@ extension GameScene {
     func rewardTouch() {
         score += 1
         scoreLabel.text = String(score)
+    }
+    
+    func fillHearts(count: Int) {
+        for index in 1...count {
+            let heart = SKSpriteNode(imageNamed: "heart")
+            let xPosition = heart.size.width * CGFloat(index - 1)
+            heart.position = CGPoint(x: xPosition, y: 0)
+            heartsArray.append(heart)
+            heartContainer.addChild(heart)
+        }
     }
 }
 
