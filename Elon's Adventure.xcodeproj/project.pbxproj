@@ -15,6 +15,7 @@
 		AC68CD40233865A9002530AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC68CD3E233865A9002530AD /* Main.storyboard */; };
 		AC68CD42233865AA002530AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC68CD41233865AA002530AD /* Assets.xcassets */; };
 		AC68CD45233865AA002530AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC68CD43233865AA002530AD /* LaunchScreen.storyboard */; };
+		ACAB994523398D4B00A079CC /* PlayerStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB994423398D4B00A079CC /* PlayerStateMachine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AC68CD41233865AA002530AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC68CD44233865AA002530AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC68CD46233865AA002530AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACAB994423398D4B00A079CC /* PlayerStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStateMachine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				AC68CD41233865AA002530AD /* Assets.xcassets */,
 				AC68CD43233865AA002530AD /* LaunchScreen.storyboard */,
 				AC68CD46233865AA002530AD /* Info.plist */,
+				ACAB994423398D4B00A079CC /* PlayerStateMachine.swift */,
 			);
 			path = "Elon's Adventure";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				AC68CD3B233865A9002530AD /* GameScene.swift in Sources */,
 				AC68CD3D233865A9002530AD /* GameViewController.swift in Sources */,
+				ACAB994523398D4B00A079CC /* PlayerStateMachine.swift in Sources */,
 				AC68CD35233865A9002530AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
