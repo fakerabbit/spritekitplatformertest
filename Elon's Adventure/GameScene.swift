@@ -58,6 +58,11 @@ class GameScene: SKScene {
             StunnedState(playerNode: player!)
         ])
         playerStateMachine.enter(IdleState.self)
+        
+        // Timer
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { (timer) in
+            self.spawnMeteor()
+        }
     }
 }
 
@@ -203,3 +208,34 @@ extension GameScene: SKPhysicsContactDelegate {
         }
     }
 }
+
+// MARK:- Other Elements
+extension GameScene {
+    
+    func spawnMeteor() {
+        
+        let node = SKSpriteNode(imageNamed: "meteor")
+        node.name = "Meteor"
+        let randomXPosition = Int(arc4random_uniform(UInt32(self.size.width)))
+        
+        node.position = CGPoint(x: randomXPosition, y: 270)
+        node.anchorPoint = CGPoint(x: 0.5, y: 1)
+        node.zPosition = 5
+        
+        let physicsBody = SKPhysicsBody(circleOfRadius: 30)
+        node.physicsBody = physicsBody
+        
+        physicsBody.categoryBitMask = Collision.Masks.killing.bitmask
+        physicsBody.collisionBitMask = Collision.Masks.player.bitmask | Collision.Masks.ground.bitmask
+        physicsBody.contactTestBitMask = Collision.Masks.player.bitmask | Collision.Masks.ground.bitmask
+        physicsBody.fieldBitMask = Collision.Masks.player.bitmask | Collision.Masks.ground.bitmask
+        
+        physicsBody.affectedByGravity = true
+        physicsBody.allowsRotation = false
+        physicsBody.restitution = 0.2
+        physicsBody.friction = 10
+        
+        addChild(node)
+    }
+}
+
