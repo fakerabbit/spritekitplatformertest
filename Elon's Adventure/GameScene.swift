@@ -27,6 +27,10 @@ class GameScene: SKScene {
     var joystickAction = false,
         knobRadius: CGFloat = 50.0
     
+    let scoreLabel = SKLabelNode()
+    var score = 0
+    var rewardIsNotTouched = true
+    
     // Sprite Engine
     var previousTimeInterval: TimeInterval = 0,
         playerIsFacingRight = true
@@ -63,6 +67,15 @@ class GameScene: SKScene {
         Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { (timer) in
             self.spawnMeteor()
         }
+        
+        // Score
+        scoreLabel.position = CGPoint(x: cameraNode!.position.x + 310, y: 140)
+        scoreLabel.fontColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+        scoreLabel.fontSize = 24
+        scoreLabel.fontName = "AvenirNext-Bold"
+        scoreLabel.horizontalAlignmentMode = .right
+        scoreLabel.text = String(score)
+        cameraNode?.addChild(scoreLabel)
     }
 }
 
@@ -120,6 +133,11 @@ extension GameScene {
         joystickKnob?.run(moveBack)
         joystickAction = false
     }
+    
+    func rewardTouch() {
+        score += 1
+        scoreLabel.text = String(score)
+    }
 }
 
 // MARK:- Game Loop
@@ -127,6 +145,8 @@ extension GameScene {
     override func update(_ currentTime: TimeInterval) {
         let deltaTime = currentTime - previousTimeInterval
         previousTimeInterval = currentTime
+        
+        rewardIsNotTouched = true
         
         // Camera
         cameraNode?.position.x = player!.position.x
@@ -209,6 +229,21 @@ extension GameScene: SKPhysicsContactDelegate {
         
         if collision.matches(.player, .ground) {
             playerStateMachine.enter(LandingState.self)
+        }
+        
+        if collision.matches(.player, .reward) {
+            if contact.bodyA.node?.name == "jewel" {
+                contact.bodyA.node?.physicsBody?.categoryBitMask = 0
+                contact.bodyA.node?.removeFromParent()
+            } else if contact.bodyB.node?.name == "jewel" {
+                contact.bodyB.node?.physicsBody?.categoryBitMask = 0
+                contact.bodyB.node?.removeFromParent()
+            }
+            
+            if rewardIsNotTouched {
+                rewardTouch()
+                rewardIsNotTouched = false
+            }
         }
         
         if collision.matches(.ground, .killing) {
