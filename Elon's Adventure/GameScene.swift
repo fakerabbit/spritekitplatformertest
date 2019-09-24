@@ -207,6 +207,10 @@ extension GameScene: SKPhysicsContactDelegate {
             player?.run(die)
         }
         
+        if collision.matches(.player, .ground) {
+            playerStateMachine.enter(LandingState.self)
+        }
+        
         if collision.matches(.ground, .killing) {
             if contact.bodyA.node?.name == "Meteor", let meteor = contact.bodyA.node {
                 createMolten(at: meteor.position)
@@ -252,7 +256,7 @@ extension GameScene {
     func createMolten(at position: CGPoint) {
         let node = SKSpriteNode(imageNamed: "molten")
         node.position.x = position.x
-        node.position.y = position.y - 60
+        node.position.y = position.y - 90
         node.zPosition = 4
         
         addChild(node)
