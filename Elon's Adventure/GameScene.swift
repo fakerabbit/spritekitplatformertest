@@ -206,6 +206,17 @@ extension GameScene: SKPhysicsContactDelegate {
             let die = SKAction.move(to: CGPoint(x: -300, y: -100), duration: 0)
             player?.run(die)
         }
+        
+        if collision.matches(.ground, .killing) {
+            if contact.bodyA.node?.name == "Meteor", let meteor = contact.bodyA.node {
+                createMolten(at: meteor.position)
+                meteor.removeFromParent()
+            }
+            if contact.bodyB.node?.name == "Meteor", let meteor = contact.bodyB.node {
+                createMolten(at: meteor.position)
+                meteor.removeFromParent()
+            }
+        }
     }
 }
 
@@ -236,6 +247,23 @@ extension GameScene {
         physicsBody.friction = 10
         
         addChild(node)
+    }
+    
+    func createMolten(at position: CGPoint) {
+        let node = SKSpriteNode(imageNamed: "molten")
+        node.position.x = position.x
+        node.position.y = position.y - 60
+        node.zPosition = 4
+        
+        addChild(node)
+        
+        let action = SKAction.sequence([
+            .fadeIn(withDuration: 0.1),
+            .wait(forDuration: 3),
+            .fadeOut(withDuration: 0.2),
+            .removeFromParent()
+        ])
+        node.run(action)
     }
 }
 
