@@ -1,5 +1,5 @@
 //
-//  Level1.swift
+//  Level2.swift
 //  Elon's Adventure
 //
 //  Created by Mirko Justiniano on 9/24/19.
@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-class Level1: GameScene {
+class Level2: GameScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
@@ -31,7 +31,7 @@ class Level1: GameScene {
         super.update(currentTime)
         
         if score >= 1 {
-            let scene = Level2(fileNamed: "Level2")
+            let scene = Level1(fileNamed: "Level1")
             scene?.scaleMode = .aspectFill
             view?.presentScene(scene)
         }

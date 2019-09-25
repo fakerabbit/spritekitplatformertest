@@ -13,7 +13,7 @@ class GameOver: SKScene {
     
     override func sceneDidLoad() {
         Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { _ in
-            let level1 = GameScene(fileNamed: "Level1")
+            let level1 = Level1(fileNamed: "Level1")
             self.view?.presentScene(level1)
             self.removeAllActions()
         }
