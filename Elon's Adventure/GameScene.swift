@@ -171,6 +171,7 @@ extension GameScene {
                 }
             } else {
                 dying()
+                gameOver()
             }
             invincible()
         }
@@ -188,6 +189,12 @@ extension GameScene {
         player?.run(die)
         self.removeAllActions()
         fillHearts(count: 3)
+    }
+    
+    func gameOver() {
+        let scene = SKScene(fileNamed: "GameOver")
+        self.view?.presentScene(scene)
+        self.removeAllActions()
     }
 }
 

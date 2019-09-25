@@ -7,8 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC2F6585233AEA3A0083AEE7 /* rewardSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2F657E233AEA390083AEE7 /* rewardSound.wav */; };
+		AC2F6586233AEA3A0083AEE7 /* music.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2F657F233AEA390083AEE7 /* music.wav */; };
+		AC2F6587233AEA3A0083AEE7 /* meteorFallingSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC2F6580233AEA390083AEE7 /* meteorFallingSound.m4a */; };
+		AC2F6588233AEA3A0083AEE7 /* levelUpSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2F6581233AEA390083AEE7 /* levelUpSound.wav */; };
+		AC2F6589233AEA3A0083AEE7 /* meteorFallingSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2F6582233AEA390083AEE7 /* meteorFallingSound.wav */; };
+		AC2F658A233AEA3A0083AEE7 /* jumpSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2F6583233AEA390083AEE7 /* jumpSound.wav */; };
+		AC2F658B233AEA3A0083AEE7 /* hitSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2F6584233AEA3A0083AEE7 /* hitSound.wav */; };
+		AC2F658D233AEAAB0083AEE7 /* GameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC2F658C233AEAAA0083AEE7 /* GameOver.sks */; };
+		AC2F658F233AEB210083AEE7 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2F658E233AEB210083AEE7 /* GameOver.swift */; };
+		AC2F6591233AEC500083AEE7 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2F6590233AEC500083AEE7 /* Level1.swift */; };
 		AC68CD35233865A9002530AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68CD34233865A9002530AD /* AppDelegate.swift */; };
-		AC68CD37233865A9002530AD /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC68CD36233865A9002530AD /* GameScene.sks */; };
+		AC68CD37233865A9002530AD /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC68CD36233865A9002530AD /* Level1.sks */; };
 		AC68CD39233865A9002530AD /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC68CD38233865A9002530AD /* Actions.sks */; };
 		AC68CD3B233865A9002530AD /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68CD3A233865A9002530AD /* GameScene.swift */; };
 		AC68CD3D233865A9002530AD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68CD3C233865A9002530AD /* GameViewController.swift */; };
@@ -19,9 +29,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC2F657E233AEA390083AEE7 /* rewardSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rewardSound.wav; sourceTree = "<group>"; };
+		AC2F657F233AEA390083AEE7 /* music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = music.wav; sourceTree = "<group>"; };
+		AC2F6580233AEA390083AEE7 /* meteorFallingSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = meteorFallingSound.m4a; sourceTree = "<group>"; };
+		AC2F6581233AEA390083AEE7 /* levelUpSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelUpSound.wav; sourceTree = "<group>"; };
+		AC2F6582233AEA390083AEE7 /* meteorFallingSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = meteorFallingSound.wav; sourceTree = "<group>"; };
+		AC2F6583233AEA390083AEE7 /* jumpSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jumpSound.wav; sourceTree = "<group>"; };
+		AC2F6584233AEA3A0083AEE7 /* hitSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hitSound.wav; sourceTree = "<group>"; };
+		AC2F658C233AEAAA0083AEE7 /* GameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOver.sks; sourceTree = "<group>"; };
+		AC2F658E233AEB210083AEE7 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		AC2F6590233AEC500083AEE7 /* Level1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
 		AC68CD31233865A9002530AD /* Elon's Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elon's Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC68CD34233865A9002530AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC68CD36233865A9002530AD /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		AC68CD36233865A9002530AD /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
 		AC68CD38233865A9002530AD /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		AC68CD3A233865A9002530AD /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		AC68CD3C233865A9002530AD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +63,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC2F657D233AEA390083AEE7 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				AC2F657E233AEA390083AEE7 /* rewardSound.wav */,
+				AC2F657F233AEA390083AEE7 /* music.wav */,
+				AC2F6580233AEA390083AEE7 /* meteorFallingSound.m4a */,
+				AC2F6581233AEA390083AEE7 /* levelUpSound.wav */,
+				AC2F6582233AEA390083AEE7 /* meteorFallingSound.wav */,
+				AC2F6583233AEA390083AEE7 /* jumpSound.wav */,
+				AC2F6584233AEA3A0083AEE7 /* hitSound.wav */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
 		AC68CD28233865A9002530AD = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +96,20 @@
 		AC68CD33233865A9002530AD /* Elon's Adventure */ = {
 			isa = PBXGroup;
 			children = (
+				AC2F657D233AEA390083AEE7 /* audio */,
 				AC68CD34233865A9002530AD /* AppDelegate.swift */,
-				AC68CD36233865A9002530AD /* GameScene.sks */,
-				AC68CD38233865A9002530AD /* Actions.sks */,
-				AC68CD3A233865A9002530AD /* GameScene.swift */,
 				AC68CD3C233865A9002530AD /* GameViewController.swift */,
+				AC68CD3A233865A9002530AD /* GameScene.swift */,
+				AC2F6590233AEC500083AEE7 /* Level1.swift */,
+				AC68CD36233865A9002530AD /* Level1.sks */,
+				AC2F658E233AEB210083AEE7 /* GameOver.swift */,
+				AC2F658C233AEAAA0083AEE7 /* GameOver.sks */,
+				ACAB994423398D4B00A079CC /* PlayerStateMachine.swift */,
 				AC68CD3E233865A9002530AD /* Main.storyboard */,
 				AC68CD41233865AA002530AD /* Assets.xcassets */,
+				AC68CD38233865A9002530AD /* Actions.sks */,
 				AC68CD43233865AA002530AD /* LaunchScreen.storyboard */,
 				AC68CD46233865AA002530AD /* Info.plist */,
-				ACAB994423398D4B00A079CC /* PlayerStateMachine.swift */,
 			);
 			path = "Elon's Adventure";
 			sourceTree = "<group>";
@@ -134,11 +172,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2F6587233AEA3A0083AEE7 /* meteorFallingSound.m4a in Resources */,
 				AC68CD40233865A9002530AD /* Main.storyboard in Resources */,
-				AC68CD37233865A9002530AD /* GameScene.sks in Resources */,
+				AC2F6585233AEA3A0083AEE7 /* rewardSound.wav in Resources */,
+				AC68CD37233865A9002530AD /* Level1.sks in Resources */,
 				AC68CD42233865AA002530AD /* Assets.xcassets in Resources */,
+				AC2F658A233AEA3A0083AEE7 /* jumpSound.wav in Resources */,
 				AC68CD45233865AA002530AD /* LaunchScreen.storyboard in Resources */,
+				AC2F658D233AEAAB0083AEE7 /* GameOver.sks in Resources */,
+				AC2F6589233AEA3A0083AEE7 /* meteorFallingSound.wav in Resources */,
 				AC68CD39233865A9002530AD /* Actions.sks in Resources */,
+				AC2F6588233AEA3A0083AEE7 /* levelUpSound.wav in Resources */,
+				AC2F658B233AEA3A0083AEE7 /* hitSound.wav in Resources */,
+				AC2F6586233AEA3A0083AEE7 /* music.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,9 +195,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2F6591233AEC500083AEE7 /* Level1.swift in Sources */,
 				AC68CD3B233865A9002530AD /* GameScene.swift in Sources */,
 				AC68CD3D233865A9002530AD /* GameViewController.swift in Sources */,
 				ACAB994523398D4B00A079CC /* PlayerStateMachine.swift in Sources */,
+				AC2F658F233AEB210083AEE7 /* GameOver.swift in Sources */,
 				AC68CD35233865A9002530AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
