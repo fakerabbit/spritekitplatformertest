@@ -192,7 +192,7 @@ extension GameScene {
     }
     
     func gameOver() {
-        let scene = SKScene(fileNamed: "GameOver")
+        let scene = GameOver(fileNamed: "GameOver")
         self.view?.presentScene(scene)
         self.removeAllActions()
     }
