@@ -34,6 +34,7 @@ class Level1: GameScene {
             let scene = Level2(fileNamed: "Level2")
             scene?.scaleMode = .aspectFill
             view?.presentScene(scene)
+            run(Sound.levelUp.action)
         }
     }
 }

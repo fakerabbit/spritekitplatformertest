@@ -19,6 +19,7 @@
 		AC2F6591233AEC500083AEE7 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2F6590233AEC500083AEE7 /* Level1.swift */; };
 		AC2F6593233B01380083AEE7 /* Level2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2F6592233B01380083AEE7 /* Level2.swift */; };
 		AC2F6597233B01A50083AEE7 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC2F6596233B01A40083AEE7 /* Level2.sks */; };
+		AC2F6599233B076B0083AEE7 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2F6598233B076B0083AEE7 /* Sound.swift */; };
 		AC68CD35233865A9002530AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68CD34233865A9002530AD /* AppDelegate.swift */; };
 		AC68CD37233865A9002530AD /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC68CD36233865A9002530AD /* Level1.sks */; };
 		AC68CD39233865A9002530AD /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC68CD38233865A9002530AD /* Actions.sks */; };
@@ -43,6 +44,7 @@
 		AC2F6590233AEC500083AEE7 /* Level1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
 		AC2F6592233B01380083AEE7 /* Level2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
 		AC2F6596233B01A40083AEE7 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
+		AC2F6598233B076B0083AEE7 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		AC68CD31233865A9002530AD /* Elon's Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elon's Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC68CD34233865A9002530AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC68CD36233865A9002530AD /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				AC2F658E233AEB210083AEE7 /* GameOver.swift */,
 				AC2F658C233AEAAA0083AEE7 /* GameOver.sks */,
 				ACAB994423398D4B00A079CC /* PlayerStateMachine.swift */,
+				AC2F6598233B076B0083AEE7 /* Sound.swift */,
 				AC68CD3E233865A9002530AD /* Main.storyboard */,
 				AC68CD41233865AA002530AD /* Assets.xcassets */,
 				AC68CD38233865A9002530AD /* Actions.sks */,
@@ -209,6 +212,7 @@
 				AC2F658F233AEB210083AEE7 /* GameOver.swift in Sources */,
 				AC2F6593233B01380083AEE7 /* Level2.swift in Sources */,
 				AC68CD35233865A9002530AD /* AppDelegate.swift in Sources */,
+				AC2F6599233B076B0083AEE7 /* Sound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
