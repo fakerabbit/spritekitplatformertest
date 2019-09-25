@@ -33,6 +33,7 @@ class GameScene: SKScene {
     
     var heartsArray = [SKSpriteNode]()
     let heartContainer = SKSpriteNode()
+    var isHit = false
     
     // Sprite Engine
     var previousTimeInterval: TimeInterval = 0,
@@ -157,6 +158,37 @@ extension GameScene {
             heartContainer.addChild(heart)
         }
     }
+    
+    func loseHeart() {
+        if isHit {
+            let lastElementIndex = heartsArray.count - 1
+            if heartsArray.indices.contains(lastElementIndex - 1) {
+                let lastHeart = heartsArray[lastElementIndex]
+                lastHeart.removeFromParent()
+                heartsArray.remove(at: lastElementIndex)
+                Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
+                    self.isHit = false
+                }
+            } else {
+                dying()
+            }
+            invincible()
+        }
+    }
+    
+    func invincible() {
+        player?.physicsBody?.categoryBitMask = 0
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
+            self.player?.physicsBody?.categoryBitMask = 2
+        }
+    }
+    
+    func dying() {
+        let die = SKAction.move(to: CGPoint(x: -300, y: 0), duration: 0.1)
+        player?.run(die)
+        self.removeAllActions()
+        fillHearts(count: 3)
+    }
 }
 
 // MARK:- Game Loop
@@ -242,8 +274,8 @@ extension GameScene: SKPhysicsContactDelegate {
         let collision = Collision(masks: (first: contact.bodyA.categoryBitMask, second: contact.bodyB.categoryBitMask))
         
         if collision.matches(.player, .killing) {
-            let die = SKAction.move(to: CGPoint(x: -300, y: -100), duration: 0)
-            player?.run(die)
+            isHit = true
+            loseHeart()
         }
         
         if collision.matches(.player, .ground) {
