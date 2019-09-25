@@ -276,6 +276,7 @@ extension GameScene: SKPhysicsContactDelegate {
         if collision.matches(.player, .killing) {
             isHit = true
             loseHeart()
+            playerStateMachine.enter(StunnedState.self)
         }
         
         if collision.matches(.player, .ground) {
